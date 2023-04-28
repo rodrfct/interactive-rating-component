@@ -1,21 +1,22 @@
 <script setup>
 
 defineProps({
-    rated: {
-        type: Boolean,
-        required: true
-    },
-
     rating: {
         type: Number,
         required: true
     }
 })
+
+defineEmits(['user-rated'])
+
+let userRating = 0
+
+
 </script>
 
 <template>
     <div class="card">
-        <div v-if="!rated" class="message-rating">
+        <div v-if="!userRating" class="message-rating">
             <img src="../assets/img/icon-star.svg" alt="">
 
             <h1>How did we do?</h1>
@@ -24,21 +25,21 @@ defineProps({
                 Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
             </p>
 
-            <ul>
-                <li class="rate">1</li>
-                <li class="rate">2</li>
-                <li class="rate">3</li>
-                <li class="rate">4</li>
-                <li class="rate">5</li>
-            </ul>
+            <form @submit.prevent="$emit('user-rated', userRating)">
+                <input type="radio" name="rating-input" value="1" v-model="userRating">
+                <input type="radio" name="rating-input" value="2" v-model="userRating">
+                <input type="radio" name="rating-input" value="3" v-model="userRating">
+                <input type="radio" name="rating-input" value="4" v-model="userRating">
+                <input type="radio" name="rating-input" value="5" v-model="userRating">
 
-            <button class="submit-btn">Submit</button>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
         </div>
 
         <div v-else class="message-thank-you">
             <div class="feedback">
                 <img src="../assets/img/illustration-thank-you.svg" alt="">
-                <p>You selected {{ rating }} out of 5</p>
+                <p>You selected {{ userRating }} out of 5</p>
             </div>
 
             <h1>Thank You!</h1>
