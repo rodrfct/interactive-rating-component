@@ -52,11 +52,24 @@ let userRating = 0
 </template>
 
 <style scoped>
-:root {
-    --very-dark-blue: hsl(216, 12%, 8%)
-}
 .card {
-    background-color: var(--very-dark-blue);
+    color: var(--light-grey);
+    padding: 20px;
+    background-color: var(--dark-blue);
     border-radius: 30px;
+}
+
+.card h1 {
+    color: var(--white)
+}
+
+.message-rating img, .message-rating input[type=radio]{
+    background-color: var(--medium-grey);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.submit-btn {
+    display: block;
 }
 </style>
