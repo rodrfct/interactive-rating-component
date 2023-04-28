@@ -26,13 +26,13 @@ let userRating = 0
             </p>
 
             <form @submit.prevent="$emit('user-rated', userRating)">
-                <input type="radio" name="rating-input" value="1" v-model="userRating">
-                <input type="radio" name="rating-input" value="2" v-model="userRating">
-                <input type="radio" name="rating-input" value="3" v-model="userRating">
-                <input type="radio" name="rating-input" value="4" v-model="userRating">
-                <input type="radio" name="rating-input" value="5" v-model="userRating">
+                <input type="radio" name="rating-input" class="rating-input" value="1" v-model="userRating">
+                <input type="radio" name="rating-input" class="rating-input" value="2" v-model="userRating">
+                <input type="radio" name="rating-input" class="rating-input" value="3" v-model="userRating">
+                <input type="radio" name="rating-input" class="rating-input" value="4" v-model="userRating">
+                <input type="radio" name="rating-input" class="rating-input" value="5" v-model="userRating">
 
-                <button type="submit" class="submit-btn">Submit</button>
+                <button type="submit" class="submit-btn">SUBMIT</button>
             </form>
         </div>
 
@@ -53,9 +53,11 @@ let userRating = 0
 
 <style scoped>
 .card {
+    width: 330px;
+    margin: auto;
     color: var(--light-grey);
     padding: 20px;
-    background-color: var(--dark-blue);
+    background-color: var(--very-dark-blue);
     border-radius: 30px;
 }
 
@@ -63,13 +65,45 @@ let userRating = 0
     color: var(--white)
 }
 
-.message-rating img, .message-rating input[type=radio]{
-    background-color: var(--medium-grey);
-    border-radius: 50%;
-    padding: 10px;
+.rating-input {
+    appearance: none;
+    --size: 40px;
+    width: var(--size);
+    height: var(--size);
+    margin: 13px;
+    color: var(--light-grey);
+}
+
+.rating-input::before {
+    content: attr(value);
+    margin-left: 6px;
+    font-family: 'Overpass', sans-serif;
 }
 
 .submit-btn {
     display: block;
+    font-weight: 700;
+    color: var(--white);
+    width: 100%;
+    padding: 10px;
+    background-color: var(--orange);
+    border: 0px;
+    border-radius: 30px;
 }
+
+.message-thank-you > * {
+    text-align: center;
+}
+
+.message-rating img, .rating-input {
+    background-color: var(--dark-blue);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.feedback p {
+    color: var(--orange);
+    background-color: var(--medium-grey);
+}
+
 </style>
