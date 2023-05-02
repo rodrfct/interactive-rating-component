@@ -21,4 +21,6 @@ p {
 
 .attribution {
   color: var(--white);
+  position: absolute;
+  bottom: 10px;
 }

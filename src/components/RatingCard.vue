@@ -53,35 +53,43 @@ let userRating = 0
 
 <style scoped>
 .card {
-    width: 310px;
-    margin: auto;
+    width: 320px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: var(--light-grey);
     padding: 20px;
     background-color: var(--dark-blue);
-    border-radius: 30px;
+    border-radius: 15px;
 }
 
 .card h1 {
     color: var(--white)
 }
 
+form {
+    display: grid;
+    row-gap: 5px;
+}
 .rating-input {
     appearance: none;
+    display: grid;
+    grid-row: 1;
+    place-items: center;
     --size: 40px;
     width: var(--size);
     height: var(--size);
-    margin: 11px;
     color: var(--light-grey);
 }
 
 .rating-input::before {
     content: attr(value);
-    margin-left: 6px;
     font-family: 'Overpass', sans-serif;
 }
 
 .submit-btn {
-    display: block;
+    grid-column: 1/6;
     width: 100%;
     background-color: var(--orange);
     padding: 10px;
@@ -112,6 +120,25 @@ let userRating = 0
     color: var(--orange);
     background-color: var(--dark-grey);
     border-radius: 25px;
+}
+
+@media (width < 375px) {
+    .card {
+        width: 220px;
+    }
+
+    h1 {
+        font-size: 1.4em;
+    }
+
+    p {
+        font-size: .8em;
+    }
+
+    .rating-input {
+        --size: 30px;
+        padding: 3px;
+    }
 }
 
 </style>
