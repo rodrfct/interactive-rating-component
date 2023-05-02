@@ -77,10 +77,24 @@ form {
     display: grid;
     grid-row: 1;
     place-items: center;
+
     --size: 40px;
     width: var(--size);
     height: var(--size);
     color: var(--light-grey);
+
+    transition: .5s all;
+}
+
+.rating-input:checked {
+    background-color: var(--medium-grey);
+    color: var(--white);
+}
+
+.rating-input:hover {
+    background-color: var(--orange);
+    color: var(--white);
+    cursor: pointer;
 }
 
 .rating-input::before {
@@ -98,6 +112,14 @@ form {
     color: var(--white);
     border: 0px;
     border-radius: 30px;
+    
+    transition: .5s all;
+}
+
+.submit-btn:hover {
+    background-color: var(--white);
+    color: var(--orange);
+    cursor: pointer;
 }
 
 .message-thank-you > * {
