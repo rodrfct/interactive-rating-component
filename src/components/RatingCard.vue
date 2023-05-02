@@ -53,11 +53,11 @@ let userRating = 0
 
 <style scoped>
 .card {
-    width: 330px;
+    width: 310px;
     margin: auto;
     color: var(--light-grey);
     padding: 20px;
-    background-color: var(--very-dark-blue);
+    background-color: var(--dark-blue);
     border-radius: 30px;
 }
 
@@ -70,7 +70,7 @@ let userRating = 0
     --size: 40px;
     width: var(--size);
     height: var(--size);
-    margin: 13px;
+    margin: 11px;
     color: var(--light-grey);
 }
 
@@ -82,28 +82,36 @@ let userRating = 0
 
 .submit-btn {
     display: block;
+    width: 100%;
+    background-color: var(--orange);
+    padding: 10px;
+    margin-top: 10px;
     font-weight: 700;
     color: var(--white);
-    width: 100%;
-    padding: 10px;
-    background-color: var(--orange);
     border: 0px;
     border-radius: 30px;
 }
 
 .message-thank-you > * {
     text-align: center;
+    margin: 0;
 }
 
 .message-rating img, .rating-input {
-    background-color: var(--dark-blue);
+    background-color: var(--dark-grey);
     border-radius: 50%;
     padding: 10px;
 }
 
+.feedback {
+    width: fit-content;
+    margin: auto auto 30px auto;
+}
 .feedback p {
+    padding: 5px 15px;
     color: var(--orange);
-    background-color: var(--medium-grey);
+    background-color: var(--dark-grey);
+    border-radius: 25px;
 }
 
 </style>
