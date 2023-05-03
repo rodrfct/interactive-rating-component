@@ -39,7 +39,7 @@ let userRating = 0
         <div v-else class="message-thank-you">
             <div class="feedback">
                 <img src="../assets/img/illustration-thank-you.svg" alt="">
-                <p>You selected {{ userRating }} out of 5</p>
+                <p>You selected {{ rating }} out of 5</p>
             </div>
 
             <h1>Thank You!</h1>
@@ -111,7 +111,7 @@ form {
     font-weight: 700;
     color: var(--white);
     text-transform: uppercase;
-    
+
     border: 0px;
     border-radius: 30px;
     

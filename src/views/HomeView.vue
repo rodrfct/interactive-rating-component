@@ -8,7 +8,7 @@
 <template>
   <main>
 
-    <RatingCard :rating="rating" @user-rated="rating = userRating" />
+    <RatingCard :rating="rating" @user-rated="(userRating) => {rating = userRating}" />
     
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
