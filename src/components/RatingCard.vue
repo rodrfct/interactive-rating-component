@@ -32,7 +32,7 @@ let userRating = 0
                 <input type="radio" name="rating-input" class="rating-input" value="4" v-model="userRating">
                 <input type="radio" name="rating-input" class="rating-input" value="5" v-model="userRating">
 
-                <button type="submit" class="submit-btn">SUBMIT</button>
+                <button type="submit" class="submit-btn">Submit</button>
             </form>
         </div>
 
@@ -110,6 +110,8 @@ form {
     margin-top: 10px;
     font-weight: 700;
     color: var(--white);
+    text-transform: uppercase;
+    
     border: 0px;
     border-radius: 30px;
     
