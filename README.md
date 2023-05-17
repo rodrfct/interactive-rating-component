@@ -64,11 +64,6 @@ this has been (and will be) very useful */
 And I think got more confortable and efficient with it
 
 
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-
 ### Useful resources
 
 - [ChatGPT](https://chat.openai.com/) - I know, I know. Don't worry, I made a responsible use of it. It tought me the bits I mentioned [earlier](#what-i-learned). But I found it is not **as good** as I thought (at least 3.5), anyway, very good resource, totally recomended (privacy issues and potentially destroying my future job aside).
